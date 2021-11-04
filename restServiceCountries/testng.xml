@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="TestNG Parameters Suite">
+    <test name="Verify_GetResponse_Ok_And_Capital_Value_Retrieved_For_EndPoint_Name">
+        <parameter name="nameEndPoint" value="name/" />
+        <parameter name="countryName" value="United States of America" />
+        <parameter name="statusCode" value="200" />
+        <parameter name="expected" value="Washington, D.C." />
+        <classes>
+            <class name="EndPointNameTests" >
+                <methods>
+                    <include name="Verify_GetResponse_Ok_And_Capital_Value_Retrieved_For_EndPoint_Name" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Verify_GetResponse_NotFound_For_EndPoint_Name">
+        <parameter name="nameEndPoint" value="name/" />
+        <parameter name="countryName" value="" />
+        <parameter name="statusCode" value="404" />
+        <classes>
+            <class name="EndPointNameTests" >
+                    <methods>
+                        <include name="Verify_GetResponse_NotFound_For_EndPoint_Name" />
+                    </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Verify_GetResponse_Ok_And_Multiple_results_retrieved_For_EndPoint_Name">
+        <parameter name="nameEndPoint" value="name/" />
+        <parameter name="countryName" value="ind" />
+        <parameter name="statusCode" value="200" />
+        <parameter name="expected" value="4" />
+        <classes>
+            <class name="EndPointNameTests" >
+                <methods>
+                    <include name="Verify_GetResponse_Ok_And_Multiple_results_retrieved_For_EndPoint_Name" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Verify_GetResponse_Ok_And_Capital_Value_Retrieved_For_EndPoint_Code">
+        <parameter name="codeEndPoint" value="alpha/" />
+        <parameter name="code" value="mex" />
+        <parameter name="statusCode" value="200" />
+        <parameter name="expected" value="Mexico City" />
+        <classes>
+            <class name="EndPointNameTests" >
+                <methods>
+                    <include name="Verify_GetResponse_Ok_And_Capital_Value_Retrieved_For_EndPoint_Code" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Verify_GetResponse_Ok_And_Capital_Value_Retrieved_With_Code_In_Upper_For_EndPoint_Code">
+        <parameter name="codeEndPoint" value="alpha/" />
+        <parameter name="code" value="MEX" />
+        <parameter name="statusCode" value="200" />
+        <parameter name="expected" value="Mexico City" />
+        <classes>
+            <class name="EndPointNameTests" >
+                <methods>
+                    <include name="Verify_GetResponse_Ok_And_Capital_Value_Retrieved_With_Code_In_Upper_For_EndPoint_Code" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Verify_GetResponse_Ok_And_Capital_Value_Retrieved_With_Code_In_Lower_For_EndPoint_Code">
+        <parameter name="codeEndPoint" value="alpha/" />
+        <parameter name="code" value="mex" />
+        <parameter name="statusCode" value="200" />
+        <parameter name="expected" value="Mexico City" />
+        <classes>
+            <class name="EndPointNameTests" >
+                <methods>
+                    <include name="Verify_GetResponse_Ok_And_Capital_Value_Retrieved_With_Code_In_Lower_For_EndPoint_Code" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Verify_GetResponse_Ok_And_Capital_Value_Retrieved_With_Code_Two_Letters_For_EndPoint_Code">
+        <parameter name="codeEndPoint" value="alpha/" />
+        <parameter name="code" value="mx" />
+        <parameter name="statusCode" value="200" />
+        <parameter name="expected" value="Mexico City" />
+        <classes>
+            <class name="EndPointNameTests" >
+                <methods>
+                    <include name="Verify_GetResponse_Ok_And_Capital_Value_Retrieved_With_Code_Two_Letters_For_EndPoint_Code" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Verify_GetResponse_Ok_And_Capital_Value_Retrieved_With_Code_Digits_For_EndPoint_Code">
+        <parameter name="codeEndPoint" value="alpha/" />
+        <parameter name="code" value="484" />
+        <parameter name="statusCode" value="200" />
+        <parameter name="expected" value="Mexico City" />
+        <classes>
+            <class name="EndPointNameTests" >
+                <methods>
+                    <include name="Verify_GetResponse_Ok_And_Capital_Value_Retrieved_With_Code_Digits_For_EndPoint_Code" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Verify_GetResponse_NotFound_With_Bad_Code_For_EndPoint_Code">
+        <parameter name="codeEndPoint" value="alpha/" />
+        <parameter name="code" value="9990" />
+        <parameter name="statusCode" value="400" />
+        <classes>
+            <class name="EndPointNameTests" >
+                <methods>
+                    <include name="Verify_GetResponse_NotFound_With_Bad_Code_For_EndPoint_Code" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
